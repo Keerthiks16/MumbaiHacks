@@ -38,7 +38,7 @@ const Header = () => {
       </div>
 
       {/* Navigation */}
-      <nav className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
+      {/* <nav className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
         <div className="nav-logo">
           <span className="logo-icon">⚡</span>
           <span className="logo-text">Financify</span>
@@ -54,7 +54,7 @@ const Header = () => {
           <button className="btn btn-signup">Signup</button>
           <button className="btn btn-login">Login</button>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Hero Section */}
       <div className="hero">

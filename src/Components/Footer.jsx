@@ -6,25 +6,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       {/* Top Banner */}
-      <div className="features-banner">
-        <div className="feature">
-          <Lock className="feature-icon" />
-          <span>100% SECURE CHECKOUT</span>
-        </div>
-        <div className="feature">
-          <Plane className="feature-icon" />
-          <span>SHIPPING TO OVER 70 COUNTRIES</span>
-        </div>
-        <div className="feature">
-          <Headphones className="feature-icon" />
-          <span>OUTSTANDING SUPPORT</span>
-        </div>
-      </div>
 
       {/* Main Footer Content */}
       <div className="footer-content">
         <div className="footer-brand">
-          <h3 className="logo">LaMetric</h3>
+          <h3 className="logo">FinTech</h3>
           <div className="social-links">
             <h4>Find us in social media</h4>
             <div className="social-icons">

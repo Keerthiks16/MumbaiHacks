@@ -72,12 +72,18 @@
   visibility: hidden;
   transform: translateY(-0.5rem);
   transition: all 0.2s ease;
+
+  /* Ensure dropdown appears above other elements */
+  z-index: 1000;
 }
 
 .dropdown.active {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+
+  /* Maintain high z-index when active */
+  z-index: 1000;
 }
 
 .dropdown-content {
@@ -222,4 +228,8 @@
     display: block;
     margin-left: auto;
   }
+}
+.navtitle {
+  color: red;
+  text-decoration: none;
 }

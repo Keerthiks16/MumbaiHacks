@@ -1,28 +1,29 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import "./ServiceNav.css";
 
 const ServiceNav = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate(); // Initialize the navigate function
 
   const menuItems = {
     INVEST: ["Stocks", "Crypto", "ETFs", "Mutual Funds", "Commodities"],
     TRADE: ["Forex", "Options", "Futures", "Copy Trading", "Signals"],
-    BANKING: ["Digital Banking", "Savings", "Cards", "International Transfer"],
+    BANKING: ["DigiBanking", "Savings", "Cards", "International Transfer"],
     LENDING: [
       "Personal Loans",
       "Business Loans",
       "P2P Lending",
       "Credit Lines",
     ],
-    PAYMENTS: [
-      "Digital Wallet",
-      "QR Payments",
-      "Payment Gateway",
-      "Remittance",
-    ],
+
     RESEARCH: ["Market Analysis", "Technical Tools", "Screeners", "API Access"],
     LEARN: ["Trading Academy", "Certification", "Webinars", "Community"],
+  };
+
+  const handleNavigation = (path) => {
+    navigate(path); // Use navigate for routing
   };
 
   return (
@@ -31,7 +32,9 @@ const ServiceNav = () => {
         <div className="navbar-content">
           {/* Logo */}
           <div className="navbar-logo">
-            <span>FINTECH</span>
+            <a className="navtitle" href="/">
+              <span>FINTECH</span>
+            </a>
           </div>
 
           {/* Navigation items */}
@@ -43,7 +46,12 @@ const ServiceNav = () => {
                 onMouseEnter={() => setActiveDropdown(category)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="nav-button">{category}</button>
+                <button
+                  className="nav-button"
+                  onClick={() => handleNavigation(`/${category.toLowerCase()}`)}
+                >
+                  {category}
+                </button>
 
                 <div
                   className={`dropdown ${
@@ -52,9 +60,17 @@ const ServiceNav = () => {
                 >
                   <div className="dropdown-content">
                     {items.map((item) => (
-                      <a key={item} href="#" className="dropdown-item">
+                      <button
+                        key={item}
+                        onClick={() =>
+                          handleNavigation(
+                            `/${category.toLowerCase()}/${item.toLowerCase()}`
+                          )
+                        }
+                        className="dropdown-item"
+                      >
                         {item}
-                      </a>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -64,10 +80,9 @@ const ServiceNav = () => {
 
           {/* Right side buttons */}
           <div className="navbar-actions">
-            <button className="btn-signin">Sign In</button>
-
-            <button className="btn-get-started">Get Started</button>
-
+            <a href="/banking/signin">
+              <button className="btn-signin">Sign In</button>
+            </a>
             <button className="btn-search">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,12 +127,25 @@ const ServiceNav = () => {
         <div className={`mobile-menu ${isMobileMenuOpen ? "active" : ""}`}>
           {Object.entries(menuItems).map(([category, items]) => (
             <div key={category} className="mobile-menu-category">
-              <button className="mobile-menu-button">{category}</button>
+              <button
+                className="mobile-menu-button"
+                onClick={() => handleNavigation(`/${category.toLowerCase()}`)}
+              >
+                {category}
+              </button>
               <div className="mobile-menu-items">
                 {items.map((item) => (
-                  <a key={item} href="#" className="mobile-menu-item">
+                  <button
+                    key={item}
+                    onClick={() =>
+                      handleNavigation(
+                        `/${category.toLowerCase()}/${item.toLowerCase()}`
+                      )
+                    }
+                    className="mobile-menu-item"
+                  >
                     {item}
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>

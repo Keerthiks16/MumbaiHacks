@@ -7,21 +7,21 @@ const About = () => {
       <div className="about-container">
         <div className="about-content">
           <div className="about-text">
-            <h3 className="about-tag">TRANSACTION MANAGEMENT</h3>
-
-            <h1 className="about-title">
-              Unlimited Transactions
-              <br />
-              tracking with zero fees
-            </h1>
+            <h1 className="about-title">About Us</h1>
 
             <p className="about-description">
-              Get access to our exclusive app that allows you to keep a track of
-              all your transactions, subscriptions. Also allows you to set goals
-              and get personalised feeds on your spendings.
+              At TransactTrack, we believe managing your finances should be
+              effortless and accessible to everyone. Founded with a mission to
+              simplify financial tracking, we offer a powerful yet user-friendly
+              platform that lets you monitor all your transactions and
+              subscriptions completely free of charge. Our innovative app helps
+              you take control of your financial journey by providing unlimited
+              transaction tracking, personalized spending insights, and smart
+              goal-setting features - all with zero fees. Whether you're
+              tracking daily expenses, managing subscriptions, or working
+              towards financial goals, we're here to make your financial
+              management experience seamless and stress-free.
             </p>
-
-            <button className="about-button">Get started</button>
           </div>
 
           <div className="about-illustration">
