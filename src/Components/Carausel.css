@@ -10,7 +10,8 @@
 
 .carausel {
   height: 500px;
-  color: black; /* Set your desired height */
+  color: black;
+   /* Set your desired height */
 }
 
 /* Make sure the images maintain aspect ratio and cover the container */

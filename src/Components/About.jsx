@@ -10,12 +10,12 @@ const About = () => {
             <h1 className="about-title">About Us</h1>
 
             <p className="about-description">
-              At TransactTrack, we believe managing your finances should be
-              effortless and accessible to everyone. Founded with a mission to
-              simplify financial tracking, we offer a powerful yet user-friendly
-              platform that lets you monitor all your transactions and
-              subscriptions completely free of charge. Our innovative app helps
-              you take control of your financial journey by providing unlimited
+              At Fintech, we believe managing your finances should be effortless
+              and accessible to everyone. Founded with a mission to simplify
+              financial tracking, we offer a powerful yet user-friendly platform
+              that lets you monitor all your transactions and subscriptions
+              completely free of charge. Our innovative app helps you take
+              control of your financial journey by providing unlimited
               transaction tracking, personalized spending insights, and smart
               goal-setting features - all with zero fees. Whether you're
               tracking daily expenses, managing subscriptions, or working
